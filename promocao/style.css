@@ -1,0 +1,343 @@
+
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+/* custom scroll bar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+/* Define as propriedades da tag body */
+body {
+  background-color: #e6f1ff;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+}
+
+
+
+
+.max-width{
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+.about, .services, .skills, .teams, .contact, footer{
+  font-family: 'Poppins', sans-serif;
+}
+.about .about-content, 
+.services .serv-content,
+.skills .skills-content,
+.contact .contact-content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar{
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  font-family: 'Ubuntu', sans-serif;
+  transition: all 0.3s ease;
+  padding: 15px 0;
+  background: #000000;
+}
+.navbar .max-width{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo a{
+  color: #f7de06;
+  font-size: 35px;
+  font-weight: 600;
+}
+.navbar .logo a span{
+  color: #a19490;
+  transition: all 0.3s ease;
+}
+.navbar.sticky .logo a span{
+  color: #fff;
+}
+.navbar .menu li{
+  list-style: none;
+  display: inline-block;
+}
+.navbar .menu li a{
+  display: block;
+  color: #faea0b;
+  font-size: 25px;
+  font-weight: 500;
+  margin-left: 20px;
+  transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+  color: #13fa0b;
+}
+
+/* menu btn styling */
+.menu-btn{
+  color: #ffffff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+
+.menu-cart{
+  color: #fff;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+
+.scroll-up-btn{
+  position: fixed;
+  height: 45px;
+  width: 42px;
+  background: #f4f80e;
+  right: 30px;
+  bottom: 10px;
+  text-align: center;
+  line-height: 45px;
+  color: #fff;
+  z-index: 999;
+  font-size: 30px;
+  border-radius: 6px;
+  border-bottom-width: 2px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+  bottom: 30px;
+  opacity: 1;
+  pointer-events: auto;
+}
+.scroll-up-btn:hover{
+  filter: brightness(90%);
+}
+/* Define as propriedades da tag h1 */
+h1 {
+  font-size: 2.5em;
+  margin-top: 30px;
+}
+
+/* Define as propriedades da div buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+/* Define as propriedades dos botões */
+button {
+  background-color: #00bfff;
+  border: none;
+  color: #fff;
+  font-size: 1.2em;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Define o estilo do botão quando o mouse passa por cima */
+button:hover {
+  background-color: #0080ff;
+}
+
+/* Define as propriedades da classe de texto */
+.text {
+  font-size: 1.2em;
+  margin-top: 30px;
+}
+
+/* Define a animação do fundo */
+@keyframes bgAnimation {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -400px 0;
+  }
+}
+
+/* Define as propriedades do fundo */
+.background {
+  background: url('https://images.unsplash.com/photo-1501630834274-4b5604d2ee33') repeat-x;
+  animation: bgAnimation 30s linear infinite;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 30px auto;
+}
+
+.card {
+  width: 350px;
+  height: auto;
+  margin: 10px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.card h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.card p {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.image-container img {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 250px;
+  }
+  .image-container img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+  display: block;
+  }
+  .navbar .menu {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  top: 55px;
+  left: 0;
+  background: #000000;
+  overflow-y: scroll;
+  padding-top: 20px;
+  transition: all 0.3s ease;
+  }
+  .menu.active {
+  display: block;
+  }
+ .navbar .menu li {
+  display: block;
+  text-align: center;
+  margin: 10px 0;
+  }
+  .menu li a {
+      display: inline-block;
+      margin: 20px 50px;
+      font-size: 25px;
+  }
+  .navbar .logo a {
+  display: none;
+  }
+  .menu-cart {
+      display: block;
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      }
+      .list {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+        }
+      
+        .lista1 {
+          width: 80%;
+          height: auto;
+          margin-bottom: 20px;
+        }
+        img {
+          max-width: 90px;
+          max-height: 60px;
+        }
+        .container{
+          width:344px;
+          height: 50%;
+          margin:auto;
+          display: flex;
+          flex-direction: column; /* adicionado para tornar responsivo */
+          align-items: center;
+          justify-content: space-around;
+          color: #fff;
+      }
+      .navbar .menu-cart i{
+          text-decoration: none;
+          color: #ffffff;
+          font-size: 23px;
+          cursor: pointer;
+      }
+      .navbar .menu-cart span{
+          text-decoration: none;
+          color: #fff;
+          font-size: 16px;
+          background: #dc1515;
+          padding: 0px 6px 0px 5px;
+          border-radius: 5px;
+          margin: 0px 0px 0px 5px;
+          position: relative;
+          top: -10px;
+          z-index: -1;
+          cursor: pointer;
+      }
+     
+
+  }
